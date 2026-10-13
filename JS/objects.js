@@ -8,3 +8,9 @@ let Pantalla = {"pixeles": [["#333", "#123", "#9AF"], ["#777", "#444", "#444"], 
 let Movil = {"especificaciones": { "ancho": 1920, "altura": 1080 }, "temperatura": "50º"};
 let powered = (Math.round(Math.random()) ? true : false)
 let Led = {"rojo": "FF", "verde": "00", "azul": "00", "encendido": powered};
+
+// Export condicional: solo existe al ejecutar con Node (node index.js).
+// En el navegador este bloque no se ejecuta y todo sigue funcionando igual.
+if (typeof module !== "undefined") {
+    module.exports = { Portatil, O_Error, Concierto, Grupo, Impresora, Pantalla, Movil, powered, Led };
+}
