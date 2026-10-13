@@ -1,5 +1,5 @@
 // Al ejecutar en Node no usamos index.html que cargaría objects.js, así que lo importamos aquí.
-// En el navegador no se ejecuta: los objetos ya llegan como globales por el HTML.
+// En el navegador estas lineas no se ejecutan: los objetos ya llegan como globales por el HTML.
 if (typeof require !== "undefined") {
     Object.assign(globalThis, require("./JS/objects.js"));
 }
@@ -15,7 +15,7 @@ console.log("1. Coche =", Coche);
 //2. objeto Casa con las propiedades codPostal, calle, portal y piso
 const Casa = {
     codPostal: 12345,
-    calle: "puerta del Sol",
+    calle: "Puerta del Sol",
     portal: 1,
     piso: 1
 };
@@ -38,7 +38,7 @@ const Perro = {
         console.log("Woof!");
     },
     popo: function () {
-        return Math.random() * 3;
+        return Math.ceil(Math.random() * 3);
     }
 };
 console.log("4. Perro =", Perro);
